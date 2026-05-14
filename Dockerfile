@@ -1,14 +1,14 @@
 FROM nanthakps/kpsmlx:heroku_v2
 
 WORKDIR /usr/src/app
-
 RUN chmod 777 /usr/src/app
-RUN pip3 install --upgrade setuptools pip
-RUN pip3 install --use-pep517 pymediainfo pyaes
 
 COPY requirements.txt .
+RUN pip3 install --upgrade setuptools
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
+
+LABEL heroku.process.type="web"
 
 CMD ["bash", "start.sh"]
