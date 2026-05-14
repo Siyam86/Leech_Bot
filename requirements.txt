@@ -25,6 +25,7 @@ motor
 mutagen
 markdown
 natsort
+
 pytz
 pillow
 psutil
@@ -46,3 +47,6 @@ xattr
 yt-dlp
 setuptools
 pyaes
+vcs-versioning
+wheel
+setuptools-scm
